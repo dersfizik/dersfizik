@@ -13,7 +13,8 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
-            overflow-x: hidden; /* Yatay kaydırmayı engeller */
+            overflow-x: hidden;
+            /* Yatay kaydırmayı engeller */
         }
 
         video#bg-video {
@@ -37,10 +38,14 @@
             align-items: flex-start;
             gap: 30px;
             text-align: center;
-            max-width: 95%; /* Maksimum genişliği artırarak daha fazla alan sağlar */
-            width: 100%; /* İçerik kutularının genişlemesini sağlar */
-            box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağlar */
-            padding: 0 10px; /* Kenarlarda boşluk bırakır */
+            max-width: 95%;
+            /* Maksimum genişliği artırarak daha fazla alan sağlar */
+            width: 100%;
+            /* İçerik kutularının genişlemesini sağlar */
+            box-sizing: border-box;
+            /* Padding ve border'ın genişliğe dahil olmasını sağlar */
+            padding: 0 10px;
+            /* Kenarlarda boşluk bırakır */
         }
 
         .text-box-center {
@@ -48,8 +53,10 @@
             border-radius: 12px;
             color: white;
             padding: 20px;
-            flex: 2; /* Diğer kutulara göre daha fazla alan kaplar */
-            min-width: 250px; /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
+            flex: 2;
+            /* Diğer kutulara göre daha fazla alan kaplar */
+            min-width: 250px;
+            /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
         }
 
         .text-box-leftright {
@@ -57,8 +64,10 @@
             border-radius: 12px;
             color: white;
             padding: 20px;
-            flex: 1; /* Ortadaki kutuya göre daha az alan kaplar */
-            min-width: 150px; /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
+            flex: 1;
+            /* Ortadaki kutuya göre daha az alan kaplar */
+            min-width: 150px;
+            /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
             text-align: left;
         }
 
@@ -112,12 +121,22 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
-                padding: 0 20px; 
+                padding: 0 20px;
                 left: 0;
                 transform: translateX(0);
-                top: 5vh; /* Dikey pozisyonu yukarı çekerek daha fazla yer açar */
-                position: static; /* Mobil görünümde sabit pozisyonu kaldırır */
-                margin-top: 20px; /* Üstten boşluk bırakır */
+                top: 5vh;
+                /* Dikey pozisyonu yukarı çekerek daha fazla yer açar */
+                position: static;
+                /* Mobil görünümde sabit pozisyonu kaldırır */
+                margin-top: 20px;
+                /* Üstten boşluk bırakır */
+
+                width: 100%;
+                margin: 0 auto;
+
+                top: auto;
+                left: auto;
+                transform: none;
             }
 
             .center {
@@ -142,7 +161,7 @@
                 text-align: left;
             }
         }
-        
+
         /* Yatay mod için eklenen yeni medya sorgusu */
         @media (orientation: landscape) and (max-width: 991px) {
             .content-wrapper {
@@ -188,12 +207,14 @@
         <div class="text-box-center center">
             <p>Hoş Geldiniz! Ben Ali Hoca.</p>
             <p>Online TYT ve AYT fizik dersleri veriyorum.</p>
-            <p>Fizik Bölümü mezunuyum. Gecmişte çalıştığı kurumların kapısı, halen kendisine açık olan bir fizikçiyim.</p>
-            <p>İstediğiniz konudan, ücretsiz online deneme dersime katılmak isterseniz, benimle iletişime geçebilirsiniz.</p>
+            <p>Fizik Bölümü mezunuyum. Gecmişte çalıştığı kurumların kapısı, halen kendisine açık olan bir fizikçiyim.
+            </p>
+            <p>İstediğiniz konudan, ücretsiz online deneme dersime katılmak isterseniz, benimle iletişime
+                geçebilirsiniz.</p>
         </div>
 
         <div class="text-box-leftright right">
-            <p style="color: #FFD700;">Ders dışı sohbet muhabbet</p>            
+            <p style="color: #FFD700;">Ders dışı sohbet muhabbet</p>
             <p>Kuantum dünyasından kara deliklere uzanan bilim sohbetleri</p>
             <p>Elektro gitar teknikleri üzerine sohbetler</p>
             <p>Yazılım sohbetleri</p>
