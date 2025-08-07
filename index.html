@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Fizik Dersi</title>
+    <title>Ders Fizik</title>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body,
         html {
@@ -101,132 +102,38 @@
             z-index: 1000;
         }
 
-        <!DOCTYPE html>
-<html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Ortada Büyük Yazı, Yanlarda Küçük</title>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
-        video#bg-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        .content-wrapper {
-            position: absolute;
-            top: 15vh;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 30px;
-            text-align: center;
-            max-width: 90%;
-            flex-wrap: nowrap;
-        }
-
-        .text-box-center {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 12px;
-            color: white;
-            padding: 20px;
-            min-width: 400px;
-        }
-
-        .text-box-leftright {
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 12px;
-            color: white;
-            padding: 20px;
-            min-width: 200px;
-            text-align: left;
-        }
-
-        .center {
-            font-size: clamp(0.6em, 1.3vw, 2em);
-            font-family: 'Michroma', sans-serif;
-            color: #FFD700;
-            order: 2;
-        }
-
-        .left,
-        .right {
-            font-size: clamp(0.6em, 0.8vw, 1.2em);
-            font-family: 'Michroma', sans-serif;
-            color: #ffffff;
-        }
-
-        .left {
-            order: 1;
-        }
-
-        .right {
-            order: 3;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1ebc59;
-        }
-
-        .whatsapp-footer {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-        }
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .content-wrapper {
                 flex-direction: column;
                 align-items: center;
-            }
-
-            .left,
-            .right {
-                order: 3;
+                flex-wrap: wrap; 
+                gap: 20px;
+                padding: 0 20px; /* Kenarlardan daha fazla boşluk */
+                left: 0;
+                transform: translateX(0);
             }
 
             .center {
                 order: 1;
             }
 
-            .text-bo-center {
-                width: 90%;
-                margin-bottom: 10px;
+            .left {
+                order: 2;
+            }
+
+            .right {
+                order: 3;
+            }
+
+            .text-box-center,
+            .text-box-leftright {
+                width: 100%;
+                min-width: unset;
+                margin-bottom: 0px; 
             }
 
             .text-box-leftright {
-                width: 90%;
-                margin-bottom: 10px;
+                text-align: left; /* Metni sola hizalamak için */
             }
 
             .center {
@@ -275,68 +182,11 @@
             <p>Kuantum dünyasından kara deliklere uzanan bilim sohbetleri</p>
             <p>Elektro gitar teknikleri üzerine sohbetler</p>
             <p>Yazılım sohbetleri</p>
-
-
-
-
-
         </div>
     </div>
 
     <div class="whatsapp-footer">
         <a href="https://wa.me/90=========" target="_blank" class="whatsapp-button">İletişim: 0505=======</a>
-    </div>
-</body>
-
-</html>
-    </style>
-</head>
-
-<body>
-    <video autoplay muted loop id="bg-video">
-        <source src="video.mp4" type="video/mp4">
-        Tarayıcınız video etiketini desteklemiyor.
-    </video>
-
-    <div class="content-wrapper">
-        <div class="text-box-leftright left">
-            <p style="color: #FFD700;">Biraz kendimden</p>
-            <p>12 yıllık deneyim</p>
-            <p>Kitap yazarı </p>
-            <p>4 yıl TÖDER redaksiyon</p>
-            <p>4 yıl Kadıköy Final'de fizik öğretmenliği</p>
-            <p>Zaman kaybının önüne geçen, kişiye özel, soru cözüm materyeli hazırlama</p>
-
-        </div>
-
-        <div class="text-box-center center">
-            <p>Hoş Geldiniz!</p>
-            <p> Ben Turgay Hoca</p>
-
-            <p>Online TYT ve AYT fizik dersleri veriyorum</p>
-
-            <p>Fizik Bölümü mezunuyum. Gecmişte çalıştığı kurumların kapısı, halen kendisine açık olan bir fizikçiyim
-            </p>
-
-            <p>İstediğiniz konudan, ücretsiz online deneme dersime katılmak isterseniz, benimle iletişime
-                geçebilirsiniz</p>
-        </div>
-
-        <div class="text-box-leftright right">
-            <p style="color: #FFD700;">Ders dışı sohbet muhabbet</p>            
-            <p>Kuantum dünyasından kara deliklere uzanan bilim sohbetleri</p>
-            <p>Elektro gitar teknikleri üzerine sohbetler</p>
-            <p>Yazılım sohbetleri</p>
-
-
-
-
-
-        </div>
-    </div>
-
-    <div class="whatsapp-footer">
-        <a href="https://wa.me/905054407839" target="_blank" class="whatsapp-button">İletişim: 0 505 440 78 39</a>
     </div>
 </body>
 
