@@ -165,24 +165,39 @@
         /* Yatay mod için eklenen yeni medya sorgusu */
         @media (orientation: landscape) and (max-width: 991px) {
             .content-wrapper {
-                top: 5vh;
                 flex-direction: column;
-                gap: 15px;
-                padding: 0 5%;
-                position: static;
-                margin-top: 20px;
+                align-items: center;
+                gap: 20px;
+                padding: 10px 5%;
+                margin: 5vh auto 100px auto; /* Buton için alttan boşluk bırakır */
             }
 
             .text-box-center,
             .text-box-leftright {
                 width: 100%;
                 min-width: unset;
-                flex: none;
+                flex: unset;
                 box-sizing: border-box;
             }
 
-            .text-box-leftright {
-                text-align: left;
+            .center {
+                order: 1;
+            }
+
+            .left {
+                order: 2;
+            }
+
+            .right {
+                order: 3;
+            }
+
+            .whatsapp-footer {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: auto;
             }
         }
     </style>
