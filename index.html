@@ -13,6 +13,7 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Yatay kaydırmayı engeller */
         }
 
         video#bg-video {
@@ -36,8 +37,10 @@
             align-items: flex-start;
             gap: 30px;
             text-align: center;
-            max-width: 90%;
-            flex-wrap: nowrap;
+            max-width: 95%; /* Maksimum genişliği artırarak daha fazla alan sağlar */
+            width: 100%; /* İçerik kutularının genişlemesini sağlar */
+            box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağlar */
+            padding: 0 10px; /* Kenarlarda boşluk bırakır */
         }
 
         .text-box-center {
@@ -45,7 +48,8 @@
             border-radius: 12px;
             color: white;
             padding: 20px;
-            min-width: 400px;
+            flex: 2; /* Diğer kutulara göre daha fazla alan kaplar */
+            min-width: 250px; /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
         }
 
         .text-box-leftright {
@@ -53,7 +57,8 @@
             border-radius: 12px;
             color: white;
             padding: 20px;
-            min-width: 200px;
+            flex: 1; /* Ortadaki kutuya göre daha az alan kaplar */
+            min-width: 150px; /* Minimum genişliği azaltarak dar ekranlara uyum sağlar */
             text-align: left;
         }
 
@@ -106,11 +111,13 @@
             .content-wrapper {
                 flex-direction: column;
                 align-items: center;
-                flex-wrap: wrap; 
                 gap: 20px;
-                padding: 0 20px; /* Kenarlardan daha fazla boşluk */
+                padding: 0 20px; 
                 left: 0;
                 transform: translateX(0);
+                top: 5vh; /* Dikey pozisyonu yukarı çekerek daha fazla yer açar */
+                position: static; /* Mobil görünümde sabit pozisyonu kaldırır */
+                margin-top: 20px; /* Üstten boşluk bırakır */
             }
 
             .center {
@@ -129,20 +136,34 @@
             .text-box-leftright {
                 width: 100%;
                 min-width: unset;
-                margin-bottom: 0px; 
             }
 
             .text-box-leftright {
-                text-align: left; /* Metni sola hizalamak için */
+                text-align: left;
+            }
+        }
+        
+        /* Yatay mod için eklenen yeni medya sorgusu */
+        @media (orientation: landscape) and (max-width: 991px) {
+            .content-wrapper {
+                top: 5vh;
+                flex-direction: column;
+                gap: 15px;
+                padding: 0 5%;
+                position: static;
+                margin-top: 20px;
             }
 
-            .center {
-                font-size: 1.8em;
+            .text-box-center,
+            .text-box-leftright {
+                width: 100%;
+                min-width: unset;
+                flex: none;
+                box-sizing: border-box;
             }
 
-            .left,
-            .right {
-                font-size: 1em;
+            .text-box-leftright {
+                text-align: left;
             }
         }
     </style>
@@ -162,19 +183,13 @@
             <p>4 yıl TÖDER redaksiyon</p>
             <p>4 yıl Kadıköy Final'de fizik öğretmenliği</p>
             <p>Zaman kaybının önüne geçen, kişiye özel, soru cözüm materyeli hazırlama</p>
-
         </div>
 
         <div class="text-box-center center">
             <p>Hoş Geldiniz! Ben Ali Hoca.</p>
-
             <p>Online TYT ve AYT fizik dersleri veriyorum.</p>
-
-            <p>Fizik Bölümü mezunuyum. Gecmişte çalıştığı kurumların kapısı, halen kendisine açık olan bir fizikçiyim.
-            </p>
-
-            <p>İstediğiniz konudan, ücretsiz online deneme dersime katılmak isterseniz, benimle iletişime
-                geçebilirsiniz.</p>
+            <p>Fizik Bölümü mezunuyum. Gecmişte çalıştığı kurumların kapısı, halen kendisine açık olan bir fizikçiyim.</p>
+            <p>İstediğiniz konudan, ücretsiz online deneme dersime katılmak isterseniz, benimle iletişime geçebilirsiniz.</p>
         </div>
 
         <div class="text-box-leftright right">
